@@ -134,7 +134,7 @@ StyledRect {
 
             sourceComponent: StyledText {
                 animate: true
-                text: Hypr.kbLayout
+                text: Hypr.kbLayout.toUpperCase()
                 color: root.colour
                 font.family: Appearance.font.family.mono
             }

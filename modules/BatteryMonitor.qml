@@ -30,13 +30,14 @@ Scope {
             if (!UPower.onBattery)
                 return;
 
-            const p = UPower.displayDevice.percentage * 100;
-            for (const level of root.warnLevels) {
-                if (p <= level.level && !level.warned) {
-                    level.warned = true;
-                    Toaster.toast(level.title ?? qsTr("Battery warning"), level.message ?? qsTr("Battery level is low"), level.icon ?? "battery_android_alert", level.critical ? Toast.Error : Toast.Warning);
-                }
-            }
+        //     const p = UPower.displayDevice.percentage * 100;
+        //     for (let i = 0; i < root.warnLevels.length; i++) {
+        //         const level = root.warnLevels[i];
+        //         if (p <= level.level && !level.warned) {
+        //             root.warnLevels[i].warned = true;
+        //             Toaster.toast(level.title ?? qsTr("Battery warning"), level.message ?? qsTr("Battery level is low"), level.icon ?? "battery_android_alert", level.critical ? Toast.Error : Toast.Warning);
+        //         }
+        //     }
 
             if (!hibernateTimer.running && p <= Config.general.battery.criticalLevel) {
                 Toaster.toast(qsTr("Hibernating in 5 seconds"), qsTr("Hibernating to prevent data loss"), "battery_android_alert", Toast.Error);
