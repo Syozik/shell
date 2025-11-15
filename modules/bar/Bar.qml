@@ -15,7 +15,7 @@ ColumnLayout {
     required property ShellScreen screen
     required property PersistentProperties visibilities
     required property BarPopouts.Wrapper popouts
-    readonly property int vPadding: Appearance.padding.large
+    readonly property int vPadding: Appearance.padding.small
 
     function closeTray(): void {
         if (!Config.bar.tray.compact)
@@ -150,6 +150,14 @@ ColumnLayout {
                 roleValue: "clock"
                 delegate: WrappedLoader {
                     sourceComponent: Clock {}
+                }
+            }
+            DelegateChoice {
+                roleValue: "verticalDate"
+                delegate: WrappedLoader {
+                    sourceComponent: VerticalDate {
+                        visibilities: root.visibilities
+                    }
                 }
             }
             DelegateChoice {

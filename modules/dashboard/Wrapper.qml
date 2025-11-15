@@ -36,10 +36,26 @@ Item {
     implicitHeight: 0
     implicitWidth: content.implicitWidth
 
+    focus: state === "visible"
+    activeFocusOnTab: true
+
+    Keys.onEscapePressed: {
+        root.visibilities.dashboard = false;
+    }
+
+    onVisibleChanged: {
+        if (visible) {
+            root.forceActiveFocus();
+        }
+    }
+
     onStateChanged: {
-        if (state === "visible" && timer.running) {
-            timer.triggered();
-            timer.stop();
+        if (state === "visible") {
+            if (timer.running) {
+                timer.triggered();
+                timer.stop();
+            }
+            root.forceActiveFocus();
         }
     }
 

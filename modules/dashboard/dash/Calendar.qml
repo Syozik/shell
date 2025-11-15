@@ -20,6 +20,7 @@ CustomMouseArea {
     anchors.left: parent.left
     anchors.right: parent.right
     implicitHeight: inner.implicitHeight + inner.anchors.margins * 2
+    implicitWidth: Config.dashboard.sizes.calendarWidth
 
     acceptedButtons: Qt.MiddleButton
     onClicked: root.state.currentDate = new Date()

@@ -13,7 +13,8 @@ JsonObject {
         readonly property int infoWidth: 200
         readonly property int infoIconSize: 25
         readonly property int dateTimeWidth: 110
-        readonly property int mediaWidth: 200
+        readonly property int calendarWidth: 300
+        readonly property int mediaWidth: 160
         readonly property int mediaProgressSweep: 180
         readonly property int mediaProgressThickness: 8
         readonly property int resourceProgessThickness: 10
