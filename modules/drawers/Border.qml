@@ -15,7 +15,7 @@ Item {
 
     StyledRect {
         anchors.fill: parent
-        color: Colours.palette.m3surface
+        color: "transparent"
 
         layer.enabled: true
         layer.effect: MultiEffect {
@@ -36,9 +36,9 @@ Item {
 
         Rectangle {
             anchors.fill: parent
-            anchors.margins: Config.border.thickness
+            // anchors.margins: Config.border.thickness
             anchors.leftMargin: root.bar.implicitWidth
-            radius: Config.border.rounding
+            // radius: Config.border.rounding
         }
     }
 }
