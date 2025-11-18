@@ -51,6 +51,17 @@ Scope {
     }
 
     CustomShortcut {
+        name: "sidebar"
+        description: "Toggle sidebar"
+        onPressed: {
+            if (root.hasFullscreen)
+                return;
+            const visibilities = Visibilities.getForActive();
+            visibilities.sidebar = !visibilities.sidebar;
+        }
+    }
+
+    CustomShortcut {
         name: "launcher"
         description: "Toggle launcher"
         onPressed: root.launcherInterrupted = false
