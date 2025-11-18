@@ -83,31 +83,6 @@ ColumnLayout {
         font.bold: true
     }
 
-    StyledClippingRect {
-        Layout.topMargin: Appearance.spacing.large * 2
-        Layout.alignment: Qt.AlignHCenter
-
-        implicitWidth: root.centerWidth / 2
-        implicitHeight: root.centerWidth / 2
-
-        color: Colours.tPalette.m3surfaceContainer
-        radius: Appearance.rounding.full
-
-        MaterialIcon {
-            anchors.centerIn: parent
-
-            text: "person"
-            color: Colours.palette.m3onSurfaceVariant
-            font.pointSize: Math.floor(root.centerWidth / 4)
-        }
-
-        CachingImage {
-            id: pfp
-
-            anchors.fill: parent
-            path: `${Paths.home}/.face`
-        }
-    }
 
     StyledRect {
         Layout.alignment: Qt.AlignHCenter
@@ -228,21 +203,13 @@ ColumnLayout {
 
             readonly property string msg: {
                 if (Hypr.kbLayout !== Hypr.defaultKbLayout) {
-                    if (Hypr.capsLock && Hypr.numLock)
-                        return qsTr("Caps lock and Num lock are ON.\nKeyboard layout: %1").arg(Hypr.kbLayoutFull);
                     if (Hypr.capsLock)
                         return qsTr("Caps lock is ON. Kb layout: %1").arg(Hypr.kbLayoutFull);
-                    if (Hypr.numLock)
-                        return qsTr("Num lock is ON. Kb layout: %1").arg(Hypr.kbLayoutFull);
                     return qsTr("Keyboard layout: %1").arg(Hypr.kbLayoutFull);
                 }
 
-                if (Hypr.capsLock && Hypr.numLock)
-                    return qsTr("Caps lock and Num lock are ON.");
                 if (Hypr.capsLock)
                     return qsTr("Caps lock is ON.");
-                if (Hypr.numLock)
-                    return qsTr("Num lock is ON.");
 
                 return "";
             }
