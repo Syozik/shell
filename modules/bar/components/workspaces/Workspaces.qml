@@ -27,13 +27,13 @@ StyledClippingRect {
     implicitWidth: Config.bar.sizes.innerWidth
     implicitHeight: layout.implicitHeight + Appearance.padding.small * 2
 
-    color: Colours.tPalette.m3surfaceContainer
+    color: "transparent"
     radius: Appearance.rounding.full
 
     Item {
         anchors.fill: parent
         scale: root.onSpecial ? 0.8 : 1
-        opacity: root.onSpecial ? 0.5 : 1
+        opacity: 1
 
         layer.enabled: root.blur > 0
         layer.effect: MultiEffect {

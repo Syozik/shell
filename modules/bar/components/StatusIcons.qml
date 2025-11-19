@@ -16,7 +16,7 @@ StyledRect {
     property color colour: Colours.palette.m3secondary
     readonly property alias items: iconColumn
 
-    color: Colours.tPalette.m3surfaceContainer
+    color: "transparent"
     radius: Appearance.rounding.full
 
     clip: true
