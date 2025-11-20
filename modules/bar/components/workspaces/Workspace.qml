@@ -31,7 +31,7 @@ ColumnLayout {
         id: indicator
 
         Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
-        Layout.preferredHeight: Config.bar.sizes.innerWidth - Appearance.padding.small * 2
+        Layout.preferredHeight: Config.bar.sizes.innerWidth - Appearance.padding.small * 20
 
         animate: true
         text: {
@@ -57,7 +57,7 @@ ColumnLayout {
 
         Layout.alignment: Qt.AlignHCenter
         Layout.fillHeight: true
-        Layout.topMargin: -Config.bar.sizes.innerWidth / 10
+        Layout.topMargin: 0
 
         visible: active
         active: root.hasWindows

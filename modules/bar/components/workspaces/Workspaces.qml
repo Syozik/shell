@@ -24,7 +24,7 @@ StyledClippingRect {
 
     property real blur: onSpecial ? 1 : 0
 
-    implicitWidth: Config.bar.sizes.innerWidth
+    implicitWidth: 20
     implicitHeight: layout.implicitHeight + Appearance.padding.small * 2
 
     color: "transparent"
@@ -47,7 +47,7 @@ StyledClippingRect {
             asynchronous: true
 
             anchors.fill: parent
-            anchors.margins: Appearance.padding.small
+            anchors.margins: 0
 
             sourceComponent: OccupiedBg {
                 workspaces: workspaces
@@ -111,7 +111,7 @@ StyledClippingRect {
         id: specialWs
 
         anchors.fill: parent
-        anchors.margins: Appearance.padding.small
+        anchors.margins: 0
 
         active: opacity > 0
         asynchronous: true

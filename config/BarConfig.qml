@@ -100,7 +100,7 @@ JsonObject {
     }
 
     component Sizes: JsonObject {
-        property int innerWidth: 25
+        property int innerWidth: 12
         property int windowPreviewSize: 400
         property int trayMenuWidth: 300
         property int batteryWidth: 250

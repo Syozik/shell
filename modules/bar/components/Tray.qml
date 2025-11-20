@@ -27,7 +27,7 @@ StyledRect {
     clip: true
     visible: height > 0
 
-    implicitWidth: Config.bar.sizes.innerWidth
+    implicitWidth: 20
     implicitHeight: nonAnimHeight
 
     color: Qt.alpha(Colours.tPalette.m3surfaceContainer, Config.bar.tray.background ? Colours.tPalette.m3surfaceContainer.a : 0)
