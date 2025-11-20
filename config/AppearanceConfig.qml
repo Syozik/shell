@@ -27,11 +27,11 @@ JsonObject {
 
     component Padding: JsonObject {
         property real scale: 1
-        property int small: 5 * scale
-        property int smaller: 7 * scale
-        property int normal: 10 * scale
-        property int larger: 12 * scale
-        property int large: 15 * scale
+        property int small: 2 * scale
+        property int smaller: 3 * scale
+        property int normal: 4 * scale
+        property int larger: 5 * scale
+        property int large: 6 * scale
     }
 
     component FontFamily: JsonObject {
