@@ -48,8 +48,8 @@ Item {
             PathAngleArc {
                 centerX: cover.x + cover.width / 2
                 centerY: cover.y + cover.height / 2
-                radiusX: (cover.width + Config.dashboard.sizes.mediaProgressThickness) / 2 + Appearance.spacing.small
-                radiusY: (cover.height + Config.dashboard.sizes.mediaProgressThickness) / 2 + Appearance.spacing.small
+                radiusX: (cover.width + Config.dashboard.sizes.mediaProgressThickness) / 2 + Appearance.spacing.small / 2
+                radiusY: (cover.height + Config.dashboard.sizes.mediaProgressThickness) / 2 + Appearance.spacing.small / 2
                 startAngle: -90 - Config.dashboard.sizes.mediaProgressSweep / 2
                 sweepAngle: Config.dashboard.sizes.mediaProgressSweep
             }
@@ -68,8 +68,8 @@ Item {
             PathAngleArc {
                 centerX: cover.x + cover.width / 2
                 centerY: cover.y + cover.height / 2
-                radiusX: (cover.width + Config.dashboard.sizes.mediaProgressThickness) / 2 + Appearance.spacing.small
-                radiusY: (cover.height + Config.dashboard.sizes.mediaProgressThickness) / 2 + Appearance.spacing.small
+                radiusX: (cover.width + Config.dashboard.sizes.mediaProgressThickness) / 2 + Appearance.spacing.small / 2
+                radiusY: (cover.height + Config.dashboard.sizes.mediaProgressThickness) / 2 + Appearance.spacing.small / 2
                 startAngle: -90 - Config.dashboard.sizes.mediaProgressSweep / 2
                 sweepAngle: Config.dashboard.sizes.mediaProgressSweep * root.playerProgress
             }
@@ -84,10 +84,10 @@ Item {
         id: cover
 
         anchors.top: parent.top
-        anchors.left: parent.left
-        anchors.right: parent.right
+        anchors.horizontalCenter: parent.horizontalCenter
         anchors.margins: Appearance.padding.large + Config.dashboard.sizes.mediaProgressThickness + Appearance.spacing.small
 
+        implicitWidth: parent.implicitWidth * 0.35
         implicitHeight: width
         color: Colours.tPalette.m3surfaceContainerHigh
         radius: Infinity
